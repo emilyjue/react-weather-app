@@ -26,7 +26,8 @@
   font-size: 11px;
 }
 
-.WeatherInfo p {
+.WeatherInfo li {
+  text-decoration: none;
   font-size: 12px;
 }
 
@@ -47,35 +48,23 @@
   display: block;
 }
 
+.WeatherTemperature .temperature {
+  font-size: 48px;
+}
+
+.WeatherTemperature .unit {
+  font-size: 8px;
+  vertical-align: top;
+}
+
 .WeatherInfo #current-left {
   text-align: center;
   position: relative;
-  top: 40px;
+
   line-height: 0.5em;
 }
 
 .WeatherInfo #current-right {
   text-align: center;
   position: relative;
-  top: 90px;
-}
-
-.Search button {
-  border-radius: 25px;
-  border: 1px solid #8064e9;
-  background: #8064e9;
-  color: #fff;
-  font-size: 11px;
-  display: inline-block;
-  margin: 0 auto;
-  line-height: 15px;
-  padding: 8px 12px;
-  text-decoration: none;
-  transition: all 200ms ease;
-  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
-}
-
-.Search button:hover {
-  cursor: pointer;
-  background: #5e41a7;
 }

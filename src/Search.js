@@ -45,7 +45,7 @@ export default function Search() {
       let city = search.charAt(0).toUpperCase() + search.slice(1);
       setSearch(city);
       let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-      let units = "imperial";
+      let units = "metric";
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
       axios.get(apiUrl).then(showTemperature);

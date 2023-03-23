@@ -9,7 +9,7 @@ export default function App() {
         <Search />
         <footer>
           <p class="github-link">
-            This website was coded by Emily Jue, and is <br />
+            This website was coded by Emily Jue, and is{" "}
             <a
               href="https://github.com/emilyjue/react-weather-app"
               target="_blank "

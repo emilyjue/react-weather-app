@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Search from "./Search";
+import "./style.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <h1>Weather App</h1>
+      <Search />
+      <footer>
+        <p class="github-link">
+          This website was coded by Emily Jue, and is <br />
+          <a href="https://github.com/emilyjue/week4" target="_blank ">
+            open-sourced
+          </a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </footer>
     </div>
   );
 }
-
-export default App;

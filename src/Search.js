@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Search() {
   let [search, setSearch] = useState("");
-  let [time, setTime] = useState("");
   const [weather, setWeather] = useState({ ready: false });
 
   //let fDay = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
@@ -23,7 +22,7 @@ export default function Search() {
           <label for="contactChoice1">Fahrenheit </label>
 
           <input type="radio" id="UnitChoice2" name="unit" value="celsius" />
-          <label for="contactChoice2">Celsius</label>
+          <label for="contactChoice2"> Celsius</label>
         </div>
       </fieldset>
     </form>
@@ -55,11 +54,12 @@ export default function Search() {
   function showTemperature(response) {
     setWeather({
       ready: true,
+      city: response.data.name,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
     });
   }
@@ -72,25 +72,7 @@ export default function Search() {
       <div className="Search">
         {searchForm}
         {unitForm}
-        <div className="row">
-          <div className="col" id="current-left">
-            <h1>{search}</h1>
-            <h2>{Math.round(weather.temperature)}°F</h2>
-            <p>
-              <FormattedDate date={weather.date} />
-            </p>
-          </div>
-          <div className="col" id="current-right">
-            <ul>
-              <li className="text-capitalize">{weather.description}</li>
-              <li>Humidity: {weather.humidity}%</li>
-              <li>Wind: {weather.wind}km/h</li>
-              <li>
-                <img src={weather.icon} alt="Weather icon" />
-              </li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo weather={weather} />
       </div>
     );
   } else {

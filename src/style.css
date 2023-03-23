@@ -16,10 +16,6 @@
   font-size: 11px;
 }
 
-.Search img {
-  vertical-align: middle;
-}
-
 .Search form {
   text-align: center;
   border: 1px solid #f9f7fe;
@@ -28,6 +24,17 @@
   padding: 30px auto;
   display: block;
   font-size: 11px;
+}
+
+.WeatherInfo p {
+  font-size: 12px;
+}
+
+.WeatherInfo canvas {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  display: inline-block;
 }
 
 .App .container {
@@ -40,19 +47,20 @@
   display: block;
 }
 
-.Search #current-left {
+.WeatherInfo #current-left {
   text-align: center;
   position: relative;
   top: 40px;
+  line-height: 0.5em;
 }
 
-.Search #current-right {
+.WeatherInfo #current-right {
   text-align: center;
   position: relative;
-  top: 40px;
+  top: 90px;
 }
 
-.Search .button {
+.Search button {
   border-radius: 25px;
   border: 1px solid #8064e9;
   background: #8064e9;
@@ -67,7 +75,7 @@
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
 }
 
-.Search .button:hover {
+.Search button:hover {
   cursor: pointer;
   background: #5e41a7;
 }

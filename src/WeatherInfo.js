@@ -6,32 +6,29 @@ import WeatherTemperature from "./WeatherTemperature";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <h1 className="text-capitalize float-left">{props.weather.city}</h1>
-      <ul>
-        <li>
-          <FormattedDate date={props.weather.date} />
-        </li>
-        <li className="text-capitalize">{props.weather.description}</li>
-      </ul>
       <div className="row mt-3">
-        <div className="col-6" id="current-left">
-          <div className="clearfix">
-            <div className="float-left">
-              <WeatherIcon code={props.weather.icon} />
-            </div>
-            <div className="float-left">
-              <WeatherTemperature celsius={props.weather.temperature} />
-            </div>
-          </div>
-        </div>
-        <div className="col-6" id="current-right">
+        <div className="col-6">
+          <h1 className="text-capitalize">{props.weather.city}</h1>
           <ul>
-            <li>Humidity: {props.weather.humidity}%</li>
-            <li>Wind: {props.weather.wind}km/h</li>
+            <li>
+              <div className="d-flex">
+                <FormattedDate date={props.weather.date} />,{" "}
+                {props.weather.description}
+              </div>
+            </li>
+            <li>
+              Humidity: {props.weather.humidity}%, Wind: {props.weather.wind}
+              km/h
+            </li>
           </ul>
         </div>
+        <div className="col-lg-6 col-md-6 col-sm-8">
+          <div className="temperature-container d-flex justify-content-end">
+            <WeatherIcon code={props.weather.icon} />
+            <WeatherTemperature celsius={props.weather.temperature} />
+          </div>
+        </div>
       </div>
-      ;
     </div>
   );
 }

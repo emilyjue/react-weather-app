@@ -8,30 +8,21 @@ export default function Search() {
 
   //let fDay = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
 
-  let unitForm = (
-    <form id="temp-form" className="temp">
-      <fieldset>
-        <div>
-          <input
-            type="radio"
-            id="UnitChoice1"
-            name="unit"
-            value="fahrenheit"
-            checked
-          />
-          <label for="contactChoice1">Fahrenheit </label>
-
-          <input type="radio" id="UnitChoice2" name="unit" value="celsius" />
-          <label for="contactChoice2"> Celsius</label>
-        </div>
-      </fieldset>
-    </form>
-  );
-
   let searchForm = (
     <form onSubmit={handleSubmit} className="search-form">
-      <input type="search" placeholder="Search city" onChange={updateSearch} />
-      <input type="submit" value="Search" />
+      <div className="row">
+        <div className="col-9">
+          <input
+            type="search"
+            placeholder="Search city"
+            class="form-control search-input"
+            onChange={updateSearch}
+          />
+        </div>
+        <div className="col-3 p-0">
+          <input type="submit" value="Search" class="btn btn-primary w-100" />
+        </div>
+      </div>
     </form>
   );
 
@@ -71,16 +62,11 @@ export default function Search() {
     return (
       <div className="Search">
         {searchForm}
-        {unitForm}
+
         <WeatherInfo weather={weather} />
       </div>
     );
   } else {
-    return (
-      <div className="Search">
-        {searchForm}
-        {unitForm}
-      </div>
-    );
+    return <div className="Search">{searchForm}</div>;
   }
 }

@@ -20,22 +20,30 @@
   text-align: center;
   border: 1px solid #f9f7fe;
   margin-top: 4px;
-  color: #8064e9;
+  color: black;
   padding: 30px auto;
   display: block;
   font-size: 11px;
+  padding-bottom: 40px;
 }
 
 .WeatherInfo li {
-  text-decoration: none;
   font-size: 12px;
+  list-style-type: none;
+  text-align: left;
+}
+
+.WeatherInfo h1 {
+  font-weight: 700;
+  font-size: 38px;
+  display: block;
 }
 
 .WeatherInfo canvas {
   height: 40px;
   width: 40px;
   margin-right: 10px;
-  display: inline-block;
+  vertical-align: middle;
 }
 
 .App .container {
@@ -46,25 +54,23 @@
   border-radius: 5px;
   text-align: center;
   display: block;
+  padding-top: 40px;
+}
+
+.WeatherInfo .temperature-contaienr {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: center;
 }
 
 .WeatherTemperature .temperature {
-  font-size: 48px;
+  font-size: 70px;
+  vertical-align: top;
+  font-weight: 700;
 }
 
 .WeatherTemperature .unit {
-  font-size: 8px;
-  vertical-align: top;
-}
-
-.WeatherInfo #current-left {
-  text-align: center;
-  position: relative;
-
-  line-height: 0.5em;
-}
-
-.WeatherInfo #current-right {
-  text-align: center;
-  position: relative;
+  font-size: 18px;
+  vertical-align: text-top;
 }

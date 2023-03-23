@@ -4,16 +4,21 @@ import "./style.css";
 export default function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
-      <Search />
-      <footer>
-        <p class="github-link">
-          This website was coded by Emily Jue, and is <br />
-          <a href="https://github.com/emilyjue/week4" target="_blank ">
-            open-sourced
-          </a>
-        </p>
-      </footer>
+      <div className="container">
+        <h1>Weather App</h1>
+        <Search />
+        <footer>
+          <p class="github-link">
+            This website was coded by Emily Jue, and is <br />
+            <a
+              href="https://github.com/emilyjue/react-weather-app"
+              target="_blank "
+            >
+              open-sourced
+            </a>
+          </p>
+        </footer>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,15 @@
+.Search li {
+  text-align: left;
+  font-size: 11px;
+}
+
+.Search form {
+  text-align: center;
+  border: 1px solid #f9f7fe;
+  margin-top: 4px;
+  color: black;
+  padding: 30px auto;
+  display: block;
+  font-size: 11px;
+  padding-bottom: 40px;
+}

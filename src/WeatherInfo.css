@@ -1,0 +1,26 @@
+.WeatherInfo h1 {
+  font-weight: 700;
+  font-size: 38px;
+  display: block;
+  margin: 20px 0 0 0;
+}
+
+.WeatherInfo li {
+  font-size: 12px;
+  list-style-type: none;
+  text-align: left;
+}
+
+.WeatherInfo canvas {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.WeatherInfo .temperature-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: center;
+}

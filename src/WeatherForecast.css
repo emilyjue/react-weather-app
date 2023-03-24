@@ -1,0 +1,23 @@
+.WeatherForecast {
+  text-align: center;
+  padding-top: 10px;
+}
+
+small {
+  font-size: 10px;
+  vertical-align: text-top;
+}
+
+.Forecast-min {
+  opacity: 0.6;
+  margin-left: 5px;
+}
+
+.Forecast-max {
+  font-weight: 700;
+}
+
+.ForecastDay {
+  opacity: 0.6;
+  font-weight: 600;
+}

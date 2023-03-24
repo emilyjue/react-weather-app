@@ -3,17 +3,20 @@
   font-size: 38px;
   display: block;
   margin: 20px 0 0 0;
-}
-
-.WeatherInfo li {
-  font-size: 12px;
-  list-style-type: none;
   text-align: left;
 }
 
+.WeatherInfo .city-info li {
+  font-size: 12px;
+  list-style-type: none;
+  text-align: left;
+  margin-left: -25px;
+  opacity: 0.8;
+}
+
 .WeatherInfo canvas {
-  height: 40px;
-  width: 40px;
+  height: 42px;
+  width: 42px;
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -21,6 +24,11 @@
 .WeatherInfo .temperature-container {
   display: flex;
   align-items: center;
-  margin-top: 30px;
-  justify-content: center;
+  justify-content: left;
+  font-size: 18px;
+  vertical-align: middle;
+  padding-top: 25px;
+}
+.WeatherInfo .city-info {
+  padding-top: 10px;
 }

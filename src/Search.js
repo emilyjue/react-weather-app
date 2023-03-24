@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./Search.css";
 
 export default function Search() {
@@ -53,6 +54,7 @@ export default function Search() {
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
+      coord: response.data.coord,
     });
   }
   function updateSearch(event) {
@@ -65,6 +67,7 @@ export default function Search() {
         {searchForm}
 
         <WeatherInfo weather={weather} />
+        <WeatherForecast coord={weather.coord} />
       </div>
     );
   } else {
